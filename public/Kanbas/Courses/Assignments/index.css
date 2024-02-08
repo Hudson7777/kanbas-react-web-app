@@ -1,0 +1,42 @@
+.custom-link {
+    color: red !important; /* Make the text red */
+    text-decoration: none !important; /* Remove the underline */
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: ">" !important; /* Ensure the separator is a ">" character */
+}
+
+.rounded-percent {
+    display: inline-block; /* Allows the div to behave like an inline element */
+    background-color: #f2f2f2; /* Light grey background, adjust as needed */
+    border-radius: 15px; /* Adjust for desired roundness */
+    padding: 2px 2px; /* Adjust padding as needed */
+    margin-right: 10px; /* Ensures some space between the text and icons */
+    font-size: 0.8em; /* Adjust font size as needed */
+}
+
+.icon-spacing i {
+    margin-right: 8px; /* Adjust the spacing between icons */
+}
+
+.assignment-title {
+    color: black; /* Set the link color to black */
+    text-decoration: none; /* Remove the underline from the link */
+    font-size: 1.25rem; /* Make the font larger */
+    font-weight: bold; /* Make the font thicker */
+}
+
+.assignment-link {
+    color: black; /* Set the link color to black */
+    text-decoration: none; /* Remove the underline from the link */
+}
+
+.assignment-link:hover, .assignment-link:focus, .assignment-title:hover, .assignment-title:focus {
+    color: black; /* Keep the link color black on hover/focus */
+    text-decoration: underline; /* Optionally add underline on hover/focus for better UX */
+}
+
+.green-left-border {
+    border-left: 3px solid green !important; /* Ensures it overrides Bootstrap styles */
+}
