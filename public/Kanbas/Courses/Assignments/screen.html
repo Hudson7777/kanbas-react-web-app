@@ -1,265 +1,253 @@
 <html>
     <head>
         <title>Assignments</title>
+        <link rel="stylesheet" type="text/css" href="/Kanbas/Navigation/index.css">
+        <link rel="stylesheet" href="/Kanbas/Courses/Navigation/index.css" />
+        <link rel="stylesheet" href="/libs/bootstrap/bootstrap.min.css" />
+        <link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.css" />
+        <link rel="stylesheet" href="/Kanbas/Courses/Modules/index.css" />
+        <link rel="stylesheet" href="/Kanbas/Courses/Assignments/index.css" />
+        <link rel="stylesheet" href="/Kanbas/styles.css" />
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     </head>
     <body>
-        <table width="100%">
-            <tr>
-                <td valign="top">
-                    <ul>
-                        <li><a href="/Kanbas/Account/Profile/screen.html">
-                           Account</a></li>
-                        <li>
-                         <a href="/Kanbas/Dashboard/screen.html">Dashboard</a>
-                        </li>
-                        <li>
-                         <a href="/Kanbas/Courses/Home/screen.html">Courses</a>
-                        </li>
-                        <li>
-                         <a href="/Kanbas/Calendar/index.html">Calendar</a></li>
-                        <li><a href="/Kanbas/Inbox/index.html">Inbox</a></li>
-                        <li><a href="/Kanbas/History/index.html">History</a></li>
-                        <li><a href="/Kanbas/Studio/index.html">Studio</a></li>
-                        <li><a href="/Kanbas/Commons/index.html">Commons</a></li>
-                        <li><a href="/Kanbas/Help/index.html">Help</a></li>
-                    </ul>
-                </td>
-                <td valign="top">
-                    <ul>
-                        <li>
-                          <a href="/Kanbas/Courses/Home/screen.html">
-                            Home</a></li>
-                        <li><a href="/Kanbas/Courses/Modules/screen.html">
-                            Modules</a></li>
-                        <li><a href="/Kanbas/Courses/Piazza/index.html">
-                            Piazza</a></li>
-                        <li><a href="/Kanbas/Courses/Grades/screen.html">
-                            Grades</a></li>
-                        <li><a href="/Kanbas/Courses/Assignments/screen.html">
-                            Assignments</a></li>
-                        <li><a href="/Kanbas/Courses/Quizzes/screen.html">
-                            Quizzes</a></li>
-                        <li><a href="/Kanbas/Courses/People/screen.html">
-                            People</a></li>
-                        <li><a href="/Kanbas/Courses/Files/screen.html">
-                            Files</a></li>
-                        <li><a href="/Kanbas/Courses/Announcements/screen.html">
-                            Announcements</a></li>
-                        <li><a href="/Kanbas/Courses/Settings/screen.html">
-                            Settings</a></li>
-                        <li><a href="/Kanbas/Courses/Collaborations/screen.html">
-                            Collaborations</a></li>
-                        <li><a href="/Kanbas/Courses/Discussions/screen.html">
-                            Discussions</a></li>
-                        <li><a href="/Kanbas/Courses/Outcomes/screen.html">
-                            Outcomes</a></li>
-                        <li><a href="/Kanbas/Courses/Pages/screen.html">
-                            Pages</a></li>
-                        <li><a href="/Kanbas/Courses/Panopto Video/index.html">
-                            Panopto Video</a></li>    
-                        <li><a href="/Kanbas/Courses/Rubrics/screen.html">
-                            Rubrics</a></li>  
-                        <li><a href="/Kanbas/Courses/Syllabus/screen.html">
-                            Syllabus</a></li> 
-                        <li><a href="/Kanbas/Courses/Zoom Meetings/index.html">
-                            Zoom Meetings</a></li>
-                    
-                    </ul>
-                    
-                </td>
-                <td valign="top">
-                    <input placeholder="Search for Assignments"/>
-<button>+ Group</button>
-<button>+ Assignment</button>
-<select>
-    <option>Edit Assignment Dates</option>
-    <option>Add Assignment Date</option>
-    <option>Delete Assignment Date</option>
-</select>
-
-<ul>
-    <li>ASSIGNMENTS 40% of Total 
-        <button>+</button>
-        <select>
-            <option>Edit</option>
-            <option>Delete</option>
-            <option>Move</option>
-        </select>
-        <ul>
-            <li><a href="/Kanbas/Courses/Assignments/Editor/screen.html">Assignment 1</a>
-                <select>
-                    <option>Edit</option>
-                    <option>Delete</option>
-                    <option>Move</option>
-                </select>
-                </br>
-                <a href="#">Multiple Modules</a> | Due Date: 2024-01-22 | Points: 100
+        <!-- Implement links to Kanbas and Course Navigation -->
+        <div class="d-flex">
+          <div class="d-none d-md-block">
+            <ul class="wd-kanbas-navigation">
+                <li><a href="http://northeastern.edu">N</a></li>
+        
+                <li><a href="/Kanbas/Account/Profile/screen.html">
+                    <span><i class="fa fa-user" aria-hidden="true" style="color: white;"></i></span>
+                    <span>Account</span></a>
+                </li>
+        
+                <li>
+                 <a href="/Kanbas/Dashboard/screen.html">  
+                    <span><i class="fa fa-tachometer"></i> </span>
+                    <span>Dashboard</span> </a>
+                </li>
+        
+                <li class="wd-active">
+                 <a href="/Kanbas/Courses/Home/screen.html"> 
+                    <span><i class="fa fa-book" aria-hidden="true"></i></span> 
+                    <span>Courses</span> </a>
+                </li>
+        
+                <li>
+                 <a href="#"> 
+                    <span><i class="fa fa-calendar" aria-hidden="true"></i> </span>
+                    <span>Calendar</span></a>
+                </li>
+        
+                <li><a href="#"> 
+                    <span><i class="fa fa-inbox" aria-hidden="true"></i> </span>
+                    <span>Inbox</span> </a>
+                </li>
+        
+                <li><a href="#"> 
+                    <span><i class="fa fa-clock-o" aria-hidden="true"></i></span>
+                    <span>History</span> </a>
+                </li>
+        
+                <li><a href="#"> 
+                    <span><i class="fa fa-desktop" aria-hidden="true"></i></span> 
+                    <span>Studio</span> </a>
+                </li>
+        
+                <li><a href="#"> 
+                    <span><i class="fa fa-sign-out" aria-hidden="true"></i></span> 
+                    <span>Commons</span> </a>
+                </li>
+        
+                <li><a href="#"> 
+                    <span><i class="fa fa-question-circle-o" aria-hidden="true"></i></span>
+                    <span>Help</span></a>
+                </li>
+        
+            </ul>
+          </div>
+          <div class="d-none d-md-block">
+            <ul class="wd-navigation">
+                <li>
+                  <a href="/Kanbas/Courses/Home/screen.html">
+                    Home</a></li>
+                <li><a href="/Kanbas/Courses/Modules/screen.html">
+                    Modules</a></li>
+                <li><a href="http://piazza.com">
+                    Piazza</a></li>
+                <li><a href="/Kanbas/Courses/Grades/screen.html">
+                    Grades</a></li>
+                <li class="wd-active"><a href="/Kanbas/Courses/Assignments/screen.html">
+                    Assignments</a></li>
+                <li><a href="/Kanbas/Courses/Settings/screen.html">
+                    Settings</a></li>
+                <li><a href="#">
+                    Quizzes</a></li>
+                <li><a href="#">
+                    People</a></li> 
+                <li><a href="#">
+                    Syllabus</a></li> 
+                <li><a href="#">
+                    Zoom Meetings</a></li>
+            
+            </ul>
+          </div>
+          <div class="flex-fill">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="#" class="custom-link">CS5610.11744.202310</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Assignments</li>
+                </ol>
+            </nav>
+            
+        
+        
+            
+            <div class="d-flex justify-content-between align-items-center">
+                <input class="form-control w-auto" placeholder="Search for Assignments" style="flex-grow: 1; max-width: 200px;"> <!-- Adjust max-width as needed -->
+            
+                <div class="ms-2 d-flex align-items-center">
+                    <button class="btn btn-outline-secondary me-2">+ Group</button>
+                    <button class="btn btn-danger me-2">+ Assignment</button>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                            <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
+                        </button>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <li><a class="dropdown-item" href="#">Edit Assignment Dates</a></li>
+                          <li><a class="dropdown-item" href="#">Add Assignment Date</a></li>
+                          <li><a class="dropdown-item" href="#">Delete Assignment Date</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            
+        </br>
+        
+        <ul class="list-group wd-modules">
+            <li class="list-group-item">
+              <div>
+                <i class="fa fa-ellipsis-v"></i> <i class="fa fa-ellipsis-v"></i> <i class="fa fa-caret-down" aria-hidden="true"></i> Assignments
+                <span class="float-end">
+                    <div class="rounded-percent">40% of Total</div>
+                    <i class="fa fa-plus ms-2"></i>
+                    <i class="fa fa-ellipsis-v ms-2"></i>
+                </span>
+              </div>
+              <ul class="list-group">
+    
+                <li class="list-group-item">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center icon-spacing">
+                            <i class="fa fa-ellipsis-v me-2"></i> 
+                            <i class="fa fa-ellipsis-v me-2"></i>
+                            <i class="fa fa-pencil-square-o text-success" aria-hidden="true"></i>
+                        </div>
+                        <div class="ms-2 flex-grow-1">
+                            <a href="/Kanbas/Courses/Assignments/Editor/screen.html" class="assignment-title">Assignment 1</a>
+                            <div>Multiple Modules</a> | Due Date: 2024-01-22 | Points: 100</div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-check-circle text-success"></i>
+                            <i class="fa fa-ellipsis-v ms-2"></i>
+                        </div>
+                    </div>
+                </li>
+    
+                <li class="list-group-item">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center icon-spacing">
+                            <i class="fa fa-ellipsis-v me-2"></i> 
+                            <i class="fa fa-ellipsis-v me-2"></i>
+                            <i class="fa fa-pencil-square-o text-success" aria-hidden="true"></i>
+                        </div>
+                        <div class="ms-2 flex-grow-1">
+                            <a href="/Kanbas/Courses/Assignments/Editor/screen.html" class="assignment-title">Assignment 2</a>
+                            <div>Multiple Modules</a> | Due Date: 2024-02-22 | Points: 100</div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-check-circle text-success"></i>
+                            <i class="fa fa-ellipsis-v ms-2"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center icon-spacing">
+                            <i class="fa fa-ellipsis-v me-2"></i> 
+                            <i class="fa fa-ellipsis-v me-2"></i>
+                            <i class="fa fa-pencil-square-o text-success" aria-hidden="true"></i>
+                        </div>
+                        <div class="ms-2 flex-grow-1">
+                            <a href="/Kanbas/Courses/Assignments/Editor/screen.html" class="assignment-title">Assignment 3</a>
+                            <div>Multiple Modules</a> | Due Date: 2024-03-22 | Points: 100</div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-check-circle text-success"></i>
+                            <i class="fa fa-ellipsis-v ms-2"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center icon-spacing">
+                            <i class="fa fa-ellipsis-v me-2"></i> 
+                            <i class="fa fa-ellipsis-v me-2"></i>
+                            <i class="fa fa-pencil-square-o text-success" aria-hidden="true"></i>
+                        </div>
+                        <div class="ms-2 flex-grow-1">
+                            <a href="/Kanbas/Courses/Assignments/Editor/screen.html" class="assignment-title">Assignment 4</a>
+                            <div>Multiple Modules</a> | Due Date: 2024-04-22 | Points: 100</div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-check-circle text-success"></i>
+                            <i class="fa fa-ellipsis-v ms-2"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center icon-spacing">
+                            <i class="fa fa-ellipsis-v me-2"></i> 
+                            <i class="fa fa-ellipsis-v me-2"></i>
+                            <i class="fa fa-pencil-square-o text-success" aria-hidden="true"></i>
+                        </div>
+                        <div class="ms-2 flex-grow-1">
+                            <a href="/Kanbas/Courses/Assignments/Editor/screen.html" class="assignment-title">Assignment 5</a>
+                            <div>Multiple Modules</a> | Due Date: 2024-05-22 | Points: 100</div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-check-circle text-success"></i>
+                            <i class="fa fa-ellipsis-v ms-2"></i>
+                        </div>
+                    </div>
+                </li>
+                <li class="list-group-item">
+                    <div class="d-flex justify-content-between">
+                        <div class="d-flex align-items-center icon-spacing">
+                            <i class="fa fa-ellipsis-v me-2"></i> 
+                            <i class="fa fa-ellipsis-v me-2"></i>
+                            <i class="fa fa-pencil-square-o text-success" aria-hidden="true"></i>
+                        </div>
+                        <div class="ms-2 flex-grow-1">
+                            <a href="/Kanbas/Courses/Assignments/Editor/screen.html" class="assignment-title">Assignment 6</a>
+                            <div>Multiple Modules</a> | Due Date: 2024-06-22 | Points: 100</div>
+                        </div>
+                        <div class="d-flex align-items-center">
+                            <i class="fa fa-check-circle text-success"></i>
+                            <i class="fa fa-ellipsis-v ms-2"></i>
+                        </div>
+                    </div>
+                </li>
+               </ul>
             </li>
-            <li><a href="/Kanbas/Courses/Assignments/Editor/screen.html">Assignment 2</a>
-                <select>
-                    <option>Edit</option>
-                    <option>Delete</option>
-                    <option>Move</option>
-                </select>
-                </br>
-                <a href="#">Multiple Modules</a> | Due Date: 2024-02-22 | Points: 100
-            </li>
-            <li><a href="/Kanbas/Courses/Assignments/Editor/screen.html">Assignment 3</a>
-                <select>
-                    <option>Edit</option>
-                    <option>Delete</option>
-                    <option>Move</option>
-                </select>
-                </br>
-                <a href="#">Multiple Modules</a> | Due Date: 2024-03-22 | Points: 100
-            </li>
-            <li><a href="/Kanbas/Courses/Assignments/Editor/screen.html">Assignment 4</a>
-                <select>
-                    <option>Edit</option>
-                    <option>Delete</option>
-                    <option>Move</option>
-                </select>
-                </br>
-                <a href="#">Multiple Modules</a> | Due Date: 2024-04-22 | Points: 100
-            </li>
-            <li><a href="/Kanbas/Courses/Assignments/Editor/screen.html">Assignment 5</a>
-                <select>
-                    <option>Edit</option>
-                    <option>Delete</option>
-                    <option>Move</option>
-                </select>
-                </br>
-                <a href="#">Multiple Modules</a> | Due Date: 2024-05-22 | Points: 100
-            </li>
-            <li><a href="/Kanbas/Courses/Assignments/Editor/screen.html">Assignment 6</a>
-                <select>
-                    <option>Edit</option>
-                    <option>Delete</option>
-                    <option>Move</option>
-                </select>
-                </br>
-                <a href="#">Multiple Modules</a> | Due Date: 2024-06-22 | Points: 100
-            </li>
-        </ul>
-    </li>
-
-    <li>QUIZZES 10% of Total
-        <button>+</button>
-        <select>
-            <option>Edit</option>
-            <option>Delete</option>
-            <option>Move</option>
-        </select>
-        <ul>
-            <li><a href="#">Quiz 1</a>
-                <select>
-                    <option>Edit</option>
-                    <option>Delete</option>
-                    <option>Move</option>
-                </select>
-                </br>
-                <a href="#">Multiple Modules</a> | Due Date: 2024-01-25 | Points: 100
-            </li>
-            <li><a href="#">Quiz 2</a>
-                <select>
-                    <option>Edit</option>
-                    <option>Delete</option>
-                    <option>Move</option>
-                </select>
-                </br>
-                <a href="#">Multiple Modules</a> | Not Available Yet | Points: 100
-            </li>
-            <li><a href="#">Quiz 3</a>
-                <select>
-                    <option>Edit</option>
-                    <option>Delete</option>
-                    <option>Move</option>
-                </select>
-                </br>
-                <a href="#">Multiple Modules</a> | Not Available Yet | Points: 100
-            </li>
-            <li><a href="#">Quiz 4</a>
-                <select>
-                    <option>Edit</option>
-                    <option>Delete</option>
-                    <option>Move</option>
-                </select>
-                </br>
-                <a href="#">Multiple Modules</a> | Not Available Yet | Points: 100
-            </li>
-            <li><a href="#">Quiz 5</a>
-                <select>
-                    <option>Edit</option>
-                    <option>Delete</option>
-                    <option>Move</option>
-                </select>
-                </br>
-                <a href="#">Multiple Modules</a> | Not Available Yet | Points: 100
-            </li>
-            <li><a href="#">Quiz 6</a>
-                <select>
-                    <option>Edit</option>
-                    <option>Delete</option>
-                    <option>Move</option>
-                </select>
-                </br>
-                <a href="#">Multiple Modules</a> | Not Available Yet | Points: 100
-            </li>
-        </ul>
-    </li>
-
-    <li>EXAMS 20% of Total
-        <button>+</button>
-        <select>
-            <option>Edit</option>
-            <option>Delete</option>
-            <option>Move</option>
-        </select>
-        <ul>
-            <li><a href="#">Exam 1</a>
-                <select>
-                    <option>Edit</option>
-                    <option>Delete</option>
-                    <option>Move</option>
-                </select>
-                </br>
-                <a href="#">Multiple Modules</a> | Not Available Yet | Points: 100
-            </li>
-            <li><a href="#">Exam 2</a>
-                <select>
-                    <option>Edit</option>
-                    <option>Delete</option>
-                    <option>Move</option>
-                </select>
-                </br>
-                <a href="#">Multiple Modules</a> | Not Available Yet | Points: 100
-            </li>
-        </ul>
-    </li>
-
-    <li>PROJECTS 30% of Total
-        <button>+</button>
-        <select>
-            <option>Edit</option>
-            <option>Delete</option>
-            <option>Move</option>
-        </select>
-        <ul>
-            <li><a href="#">Project</a>
-                <select>
-                    <option>Edit</option>
-                    <option>Delete</option>
-                    <option>Move</option>
-                </select>
-                </br>
-                <a href="#">Multiple Modules</a> | Not Available Yet | Points: 100
-            </li>
-        </ul>
-    </li>
-
-</ul>
-                </td>
-            </tr>
-        </table>
-    </body>
+            </ul>   
+        </div>
+      </body>
 </html>

@@ -1,0 +1,6 @@
+[ { "_id": "CS101", "name": "Introduction to AI", "description": "The fundamental of AI","number": "CS5100", "startDate": "2023-01-10",
+    "endDate": "2023-05-15", "image": "pic_1.jpg"  },
+  { "_id": "CS102", "name": "Web Development", "number": "CS5610", "description": "Techs that are useful in Web", "startDate": "2023-01-10",
+    "endDate": "2023-05-15", "image": "pic_2.jpg"  },
+  { "_id": "CS103", "name": "Database Management", "number": "CS5200", "description": "Techs that are useful in DBMS","startDate": "2023-01-10",
+    "endDate": "2023-05-15", "image": "pic_3.jpg"  } ]

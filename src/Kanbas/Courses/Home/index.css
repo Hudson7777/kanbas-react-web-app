@@ -1,0 +1,9 @@
+.content-flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .wd-modules, .flex-grow-0 {
+    flex: 1; 
+  }
