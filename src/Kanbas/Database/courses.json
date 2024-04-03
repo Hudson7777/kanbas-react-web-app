@@ -5,7 +5,7 @@
       "number": "RS4550",
       "startDate": "2022-12-11",
       "endDate": "2023-06-14",
-      "image": "pic_0.jpg"
+      "image": "aerodynamics.png"
   },
   {
       "_id": "RS102",
@@ -13,7 +13,7 @@
       "number": "RS4560",
       "startDate": "2022-12-11",
       "endDate": "2023-06-14",
-      "image": "pic_3.jpg"
+      "image": "reactjs.jpg"
   },
   {
       "_id": "RS103",
@@ -21,7 +21,7 @@
       "number": "RS4570",
       "startDate": "2022-12-11",
       "endDate": "2023-06-14",
-      "image": "pic_1.jpg"
+      "image": "spaceship-design.png"
   },
   {
       "_id": "RS104",
@@ -29,7 +29,7 @@
       "number": "RS4580",
       "startDate": "2022-12-11",
       "endDate": "2023-06-14",
-      "image": "pic_2.jpg"
+      "image": "orbital-mechanics.png"
   },
   {
       "_id": "RS105",
@@ -37,7 +37,7 @@
       "number": "RS4590",
       "startDate": "2022-12-11",
       "endDate": "2023-06-14",
-      "image": "pic_4.jpeg"
+      "image": "space-mission-analysis.png"
   },
   {
       "_id": "RS106",
@@ -45,7 +45,7 @@
       "number": "RS4600",
       "startDate": "2022-12-11",
       "endDate": "2023-06-14",
-      "image": "pic_5.jpeg"
+      "image": "astrodynamics.png"
   },
   {
       "_id": "RS107",
@@ -53,6 +53,6 @@
       "number": "RS4610",
       "startDate": "2022-12-11",
       "endDate": "2023-06-14",
-      "image": "pic_6.jpg"
+      "image": "satellite-systems.png"
   }
 ]
