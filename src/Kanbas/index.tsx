@@ -1,5 +1,10 @@
 import KanbasNavigation from "./Navigation";
 import { Routes, Route, Navigate } from "react-router-dom";
+<<<<<<< HEAD
+=======
+import { useState, useEffect } from "react";
+import axios from "axios";
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 import Dashboard from "./Dashboard";
 import Courses from "./Courses";
 import store from "./store/store";

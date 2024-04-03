@@ -1,6 +1,11 @@
+<<<<<<< HEAD
 import React from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { db } from "../../../Database";
+=======
+import { useNavigate, useParams, Link } from "react-router-dom";
+import React from "react";
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 import "./index.css";
 import { useDispatch, useSelector } from "react-redux";
 import { KanbasState } from "../../../store/store";
@@ -10,6 +15,10 @@ import {
   updateAssignment,
   selectAssignment,
 } from "../../../store/assignmentsReducer";
+<<<<<<< HEAD
+=======
+import * as client from "../client";
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 function AssignmentEditor() {
   const { courseId, assignmentId } = useParams();
   const assignmentList = useSelector(
@@ -20,6 +29,21 @@ function AssignmentEditor() {
   );
   const dispatch = useDispatch();
   const navigate = useNavigate();
+<<<<<<< HEAD
+=======
+
+  const handleAddAssignment = () => {
+    client.createAssignment(courseId, assignment).then((assignment) => {
+      dispatch(addAssignment(assignment));
+    });
+  };
+
+  const handleUpdateAssignment = async () => {
+    const status = await client.updateAssignment(assignment);
+    dispatch(updateAssignment(assignment));
+  };
+
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
   return (
     <div>
       <h2>Assignment Name</h2>
@@ -169,9 +193,17 @@ function AssignmentEditor() {
       <button
         onClick={() => {
           if (!assignmentId) {
+<<<<<<< HEAD
             dispatch(addAssignment({ ...assignment, course: courseId }));
           } else {
             dispatch(updateAssignment(assignment));
+=======
+            // dispatch(addAssignment({ ...assignment, course: courseId }));
+            handleAddAssignment();
+          } else {
+            // dispatch(updateAssignment(assignment));
+            handleUpdateAssignment();
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
           }
           navigate(`/Kanbas/Courses/${courseId}/Assignments`);
         }}

@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 import React, { useState } from "react";
+=======
+import React, { useState, useEffect } from "react";
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 import "./index.css";
 import { FaEllipsisV } from "react-icons/fa";
 import { useSelector, useDispatch } from "react-redux";
@@ -9,10 +13,21 @@ import {
   deleteModule,
   updateModule,
   setModule,
+<<<<<<< HEAD
 } from "../../store/modulesReducer";
 
 function ModuleList() {
   const { courseId } = useParams();
+=======
+  setModules,
+} from "../../store/modulesReducer";
+import * as client from "./client";
+// import { findModulesForCourse, createModule, deleteModule } from "./client";
+
+function ModuleList() {
+  const { courseId } = useParams();
+
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
   const moduleList = useSelector(
     (state: KanbasState) => state.modulesReducer.modules
   );
@@ -20,6 +35,31 @@ function ModuleList() {
     (state: KanbasState) => state.modulesReducer.module
   );
   const dispatch = useDispatch();
+<<<<<<< HEAD
+=======
+  const handleAddModule = () => {
+    client.createModule(courseId, module).then((module) => {
+      dispatch(addModule(module));
+    });
+  };
+
+  const handleDeleteModule = (moduleId: string) => {
+    client.deleteModule(moduleId).then((status) => {
+      dispatch(deleteModule(moduleId));
+    });
+  };
+
+  const handleUpdateModule = async () => {
+    const status = await client.updateModule(module);
+    dispatch(updateModule(module));
+  };
+
+  useEffect(() => {
+    client
+      .findModulesForCourse(courseId)
+      .then((modules) => dispatch(setModules(modules)));
+  }, [courseId]);
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 
   return (
     <>
@@ -58,13 +98,23 @@ function ModuleList() {
             style={{ maxWidth: "500px" }}
           />
           <button
+<<<<<<< HEAD
             onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+=======
+            // onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+            onClick={handleAddModule}
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
             className="btn btn-success m-1"
           >
             Add
           </button>
           <button
+<<<<<<< HEAD
             onClick={() => dispatch(updateModule(module))}
+=======
+            // onClick={() => dispatch(updateModule(module))}
+            onClick={handleUpdateModule}
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
             className="btn btn-info m-1"
           >
             Update
@@ -82,7 +132,12 @@ function ModuleList() {
                   Edit
                 </button>
                 <button
+<<<<<<< HEAD
                   onClick={() => dispatch(deleteModule(module._id))}
+=======
+                  // onClick={() => dispatch(deleteModule(module._id))}
+                  onClick={() => handleDeleteModule(module._id)}
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
                   className="btn btn-danger m-1"
                 >
                   Delete
