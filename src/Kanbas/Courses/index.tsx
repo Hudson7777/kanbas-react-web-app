@@ -14,6 +14,7 @@ import Grades from "./Grades";
 import { useSelector } from "react-redux";
 import { KanbasState } from "../store/store";
 <<<<<<< HEAD
+<<<<<<< HEAD
 
 function Courses() {
   const { courseId } = useParams();
@@ -22,6 +23,8 @@ function Courses() {
   );
   const course = courses.find((course) => course._id === courseId);
 =======
+=======
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 import * as courseClient from "./client";
 
 function Courses() {
@@ -39,6 +42,9 @@ function Courses() {
   useEffect(() => {
     fetchCourse();
   }, [courseId]);
+<<<<<<< HEAD
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
+=======
 >>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 
   // get the current tab of course ("Home", "Modules", "Piazza", "Grades", "Assignments")

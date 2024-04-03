@@ -1,5 +1,9 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState } from "react";
+=======
+import React, { useState, useEffect } from "react";
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 =======
 import React, { useState, useEffect } from "react";
 >>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
@@ -14,11 +18,14 @@ import {
   updateModule,
   setModule,
 <<<<<<< HEAD
+<<<<<<< HEAD
 } from "../../store/modulesReducer";
 
 function ModuleList() {
   const { courseId } = useParams();
 =======
+=======
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
   setModules,
 } from "../../store/modulesReducer";
 import * as client from "./client";
@@ -27,6 +34,9 @@ import * as client from "./client";
 function ModuleList() {
   const { courseId } = useParams();
 
+<<<<<<< HEAD
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
+=======
 >>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
   const moduleList = useSelector(
     (state: KanbasState) => state.modulesReducer.modules
@@ -36,7 +46,10 @@ function ModuleList() {
   );
   const dispatch = useDispatch();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
   const handleAddModule = () => {
     client.createModule(courseId, module).then((module) => {
       dispatch(addModule(module));
@@ -59,6 +72,9 @@ function ModuleList() {
       .findModulesForCourse(courseId)
       .then((modules) => dispatch(setModules(modules)));
   }, [courseId]);
+<<<<<<< HEAD
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
+=======
 >>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 
   return (
@@ -99,7 +115,12 @@ function ModuleList() {
           />
           <button
 <<<<<<< HEAD
+<<<<<<< HEAD
             onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+=======
+            // onClick={() => dispatch(addModule({ ...module, course: courseId }))}
+            onClick={handleAddModule}
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 =======
             // onClick={() => dispatch(addModule({ ...module, course: courseId }))}
             onClick={handleAddModule}
@@ -110,7 +131,12 @@ function ModuleList() {
           </button>
           <button
 <<<<<<< HEAD
+<<<<<<< HEAD
             onClick={() => dispatch(updateModule(module))}
+=======
+            // onClick={() => dispatch(updateModule(module))}
+            onClick={handleUpdateModule}
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 =======
             // onClick={() => dispatch(updateModule(module))}
             onClick={handleUpdateModule}
@@ -133,7 +159,12 @@ function ModuleList() {
                 </button>
                 <button
 <<<<<<< HEAD
+<<<<<<< HEAD
                   onClick={() => dispatch(deleteModule(module._id))}
+=======
+                  // onClick={() => dispatch(deleteModule(module._id))}
+                  onClick={() => handleDeleteModule(module._id)}
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 =======
                   // onClick={() => dispatch(deleteModule(module._id))}
                   onClick={() => handleDeleteModule(module._id)}

@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import { useSelector, useDispatch } from "react-redux";
 import {
   addNewCourse,
@@ -17,6 +18,8 @@ function Dashboard() {
     (state: KanbasState) => state.coursesReducer.course
   );
 =======
+=======
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 import { useState, useEffect } from "react";
 import axios from "axios";
 import * as courseClient from "../Courses/client";
@@ -74,6 +77,9 @@ function Dashboard() {
   // const course = useSelector(
   //   (state: KanbasState) => state.coursesReducer.course
   // );
+<<<<<<< HEAD
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
+=======
 >>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
   const dispatch = useDispatch();
   return (
@@ -88,7 +94,12 @@ function Dashboard() {
             style={{ maxWidth: "200px", flexGrow: 1 }}
             onChange={(e) =>
 <<<<<<< HEAD
+<<<<<<< HEAD
               dispatch(setCourse({ ...course, name: e.target.value }))
+=======
+              // dispatch(setCourse({ ...course, name: e.target.value }))
+              setCourse({ ...course, name: e.target.value })
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 =======
               // dispatch(setCourse({ ...course, name: e.target.value }))
               setCourse({ ...course, name: e.target.value })
@@ -101,7 +112,12 @@ function Dashboard() {
             style={{ maxWidth: "200px", flexGrow: 1 }}
             onChange={(e) =>
 <<<<<<< HEAD
+<<<<<<< HEAD
               dispatch(setCourse({ ...course, number: e.target.value }))
+=======
+              // dispatch(setCourse({ ...course, number: e.target.value }))
+              setCourse({ ...course, number: e.target.value })
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 =======
               // dispatch(setCourse({ ...course, number: e.target.value }))
               setCourse({ ...course, number: e.target.value })
@@ -115,7 +131,12 @@ function Dashboard() {
             type="date"
             onChange={(e) =>
 <<<<<<< HEAD
+<<<<<<< HEAD
               dispatch(setCourse({ ...course, startDate: e.target.value }))
+=======
+              // dispatch(setCourse({ ...course, startDate: e.target.value }))
+              setCourse({ ...course, startDate: e.target.value })
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 =======
               // dispatch(setCourse({ ...course, startDate: e.target.value }))
               setCourse({ ...course, startDate: e.target.value })
@@ -129,7 +150,12 @@ function Dashboard() {
             type="date"
             onChange={(e) =>
 <<<<<<< HEAD
+<<<<<<< HEAD
               dispatch(setCourse({ ...course, endDate: e.target.value }))
+=======
+              // dispatch(setCourse({ ...course, endDate: e.target.value }))
+              setCourse({ ...course, endDate: e.target.value })
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 =======
               // dispatch(setCourse({ ...course, endDate: e.target.value }))
               setCourse({ ...course, endDate: e.target.value })
@@ -139,7 +165,12 @@ function Dashboard() {
         </div>
         <button
 <<<<<<< HEAD
+<<<<<<< HEAD
           onClick={() => dispatch(addNewCourse({ ...course }))}
+=======
+          // onClick={() => dispatch(addNewCourse({ ...course }))}
+          onClick={() => addNewCourse()}
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 =======
           // onClick={() => dispatch(addNewCourse({ ...course }))}
           onClick={() => addNewCourse()}
@@ -150,7 +181,12 @@ function Dashboard() {
         </button>
         <button
 <<<<<<< HEAD
+<<<<<<< HEAD
           onClick={() => dispatch(updateCourse(course))}
+=======
+          // onClick={() => dispatch(updateCourse(course))}
+          onClick={() => updateCourse(course)}
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 =======
           // onClick={() => dispatch(updateCourse(course))}
           onClick={() => updateCourse(course)}
@@ -164,7 +200,11 @@ function Dashboard() {
       <div className="row">
         <div className="row row-cols-1 row-cols-md-5 g-4">
 <<<<<<< HEAD
+<<<<<<< HEAD
           {courses.map((course) => (
+=======
+          {courses.map((course: any) => (
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 =======
           {courses.map((course: any) => (
 >>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
@@ -191,7 +231,12 @@ function Dashboard() {
                       onClick={(event) => {
                         event.preventDefault();
 <<<<<<< HEAD
+<<<<<<< HEAD
                         dispatch(deleteCourse(course._id));
+=======
+                        // dispatch(deleteCourse(course._id));
+                        deleteCourse(course._id);
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 =======
                         // dispatch(deleteCourse(course._id));
                         deleteCourse(course._id);
@@ -205,7 +250,12 @@ function Dashboard() {
                       onClick={(event) => {
                         event.preventDefault();
 <<<<<<< HEAD
+<<<<<<< HEAD
                         dispatch(setCourse(course));
+=======
+                        // dispatch(setCourse(course));
+                        setCourse(course);
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 =======
                         // dispatch(setCourse(course));
                         setCourse(course);

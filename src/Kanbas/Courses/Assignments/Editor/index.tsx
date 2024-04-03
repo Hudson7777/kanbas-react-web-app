@@ -1,7 +1,12 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React from "react";
 import { useNavigate, useParams, Link } from "react-router-dom";
 import { db } from "../../../Database";
+=======
+import { useNavigate, useParams, Link } from "react-router-dom";
+import React from "react";
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 =======
 import { useNavigate, useParams, Link } from "react-router-dom";
 import React from "react";
@@ -16,6 +21,10 @@ import {
   selectAssignment,
 } from "../../../store/assignmentsReducer";
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+import * as client from "../client";
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 =======
 import * as client from "../client";
 >>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
@@ -30,7 +39,10 @@ function AssignmentEditor() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
 
   const handleAddAssignment = () => {
     client.createAssignment(courseId, assignment).then((assignment) => {
@@ -43,6 +55,9 @@ function AssignmentEditor() {
     dispatch(updateAssignment(assignment));
   };
 
+<<<<<<< HEAD
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
+=======
 >>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
   return (
     <div>
@@ -194,15 +209,21 @@ function AssignmentEditor() {
         onClick={() => {
           if (!assignmentId) {
 <<<<<<< HEAD
+<<<<<<< HEAD
             dispatch(addAssignment({ ...assignment, course: courseId }));
           } else {
             dispatch(updateAssignment(assignment));
 =======
+=======
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
             // dispatch(addAssignment({ ...assignment, course: courseId }));
             handleAddAssignment();
           } else {
             // dispatch(updateAssignment(assignment));
             handleUpdateAssignment();
+<<<<<<< HEAD
+>>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
+=======
 >>>>>>> a7cc2d2ce83599c0864fa3b13b57bee94e856472
           }
           navigate(`/Kanbas/Courses/${courseId}/Assignments`);
