@@ -1,6 +1,8 @@
 function Destructing() {
     const person = { name: "John", age: 25 };
     const { name, age } = person;
+    // const name = person.name
+    // const age = person.age
     const numbers = ["one", "two", "three"];
     const [ first, second, third ] = numbers;
     return (
@@ -20,5 +22,3 @@ function Destructing() {
     );
    }
    export default Destructing;
-   
-   

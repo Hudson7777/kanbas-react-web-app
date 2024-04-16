@@ -3,6 +3,7 @@
     list-style: none;
     padding: 0px;  margin: 0px;
     width: 80px;
+    height: 100%;
   }
   .wd-kanbas-navigation li {
     padding: 10px;     margin-bottom: 10px;
@@ -23,18 +24,10 @@
     font-size: 2em;
     margin-bottom: 5px;
   }
-
-  .icon-red {
+  .fs-2 {
     color: red;
   }
+  .user-icon {
+    color: grey;
+  }
   
-  .wd-fg-white {
-    color: white;
-    }
-
-    .northeastern-icon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: 100%;
-    }

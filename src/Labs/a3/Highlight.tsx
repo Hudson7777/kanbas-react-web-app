@@ -7,4 +7,3 @@ function Highlight({ children }: { children: ReactNode }) {
   );
 }
 export default Highlight;
-

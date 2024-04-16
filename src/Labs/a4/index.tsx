@@ -17,22 +17,22 @@ const Assignment4 = () => {
     alert("Hello");
   }
 
-  return (
-    <div className="mt-2">
+  return(
+    <>
       <h1>Assignment 4</h1>
-      <ClickEvent />
-      <PassingDataOnEvent />
+      <ReduxExamples/>
+      <ClickEvent/>
+      <PassingDataOnEvent/>
       <PassingFunctions theFunction={sayHello} />
-      <EventObject />
-      <Counter />
-      <BooleanStateVariables />
-      <StringStateVariables />
-      <DateStateVariable />
-      <ObjectStateVariable />
-      <ArrayStateVariable />
-      <ParentStateComponent />
-      <ReduxExamples />
-    </div>
+      <EventObject/>
+      <Counter/>
+      <BooleanStateVariables/>
+      <StringStateVariables/>
+      <DateStateVariable/>
+      <ObjectStateVariable/>
+      <ArrayStateVariable/>
+      <ParentStateComponent/>
+    </>
   );
 };
 export default Assignment4;
