@@ -1,18 +1,46 @@
-.custom-breadcrumb {
-    --bs-breadcrumb-divider: ">";
-    }
+.header {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: red;
+    font-size: 24px;
+    padding-top: 10px;
+}
 
-    .breadcrumb {
-        margin-bottom: 0px;
-        margin-left: 10px;
-      }
-    
-      .top-bar {
-        margin-left: 20px;
-        font-size: 2rem; /* Example size, adjust as needed */
-      }
-    
-      .breadcrumb-item a {
-        color: red; /* Set the text color to red */
-        text-decoration: none; /* Remove the underline */
-      }
+.icon {
+    background: none;
+    border: none;
+    margin-right: 10px;
+    padding: 0;
+    color: red;
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+.hrStyle {
+    border: none;
+    height: 5px;
+    background-color: red;
+    margin: 10px 0;
+}
+
+.courseContent {
+    display: flex;
+    flex-direction: row;
+}
+
+.courseNavigation {
+    display: none;
+}
+
+.courseNavigationVisible {
+    display: block;
+}
+
+.courseMainContent {
+    flex-grow: 1;
+    height: calc(100vh - 50px);
+    margin-left: 20px;
+    overflow-y: scroll;
+}
