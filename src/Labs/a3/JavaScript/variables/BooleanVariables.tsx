@@ -20,6 +20,7 @@ function BooleanVariables() {
         false3    = {false3 + ""}    <br />
       </div>
     );
-}    
+    
+}
 
 export default BooleanVariables;

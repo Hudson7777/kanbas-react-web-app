@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 function WorkingWithObjects() {
+  // assignment state variable
   const [assignment, setAssignment] = useState({
     id: 1,
     title: "NodeJS Assignment",
@@ -9,6 +10,17 @@ function WorkingWithObjects() {
     completed: false,
     score: 0,
   });
+  // module state variable
+  const [module, setModule] = useState({
+    id: 1,
+    name: "NodeJS",
+    description: "NodeJS module",
+    course: "Web Development",
+  });
+
+  const API_BASE = process.env.REACT_APP_API_BASE;
+
+  const ASSIGNMENT_URL = `${API_BASE}/a5/assignment`;
   const fetchAssignment = async () => {
     const response = await axios.get(`${ASSIGNMENT_URL}`);
     setAssignment(response.data);
@@ -23,19 +35,12 @@ function WorkingWithObjects() {
     fetchAssignment();
   }, []);
 
-  const [module, setModule] = useState({
-    id: 1,
-    name: "Web Dev",
-    description: "develop a web",
-    course: "CS572",
-  });
-  const ASSIGNMENT_URL = "http://localhost:4000/a5/assignment";
-  const MODULE_URL = "http://localhost:4000/a5/module";
-
+  const MODULE_URL = `${API_BASE}/a5/module`;
   return (
     <div>
       <h3>Working With Objects</h3>
-      <h3>Modifying Properties</h3>
+      <h4>Modifying Properties</h4>
+      <h5>3.4.4</h5>
       <input
         onChange={(e) =>
           setAssignment({
@@ -48,28 +53,15 @@ function WorkingWithObjects() {
       />
       <button onClick={updateTitle}>Update Title to: {assignment.title}</button>
       <button onClick={fetchAssignment}>Fetch Assignment</button>
-      <hr />
-
-      <h4>Retrieving Objects</h4>
-      <a href="http://localhost:4000/a5/assignment" className="btn btn-warning">
-        Get Assignment
-      </a>
-      <h4>Retrieving Properties</h4>
-      <a
-        href="http://localhost:4000/a5/assignment/title"
-        className="btn btn-warning"
-      >
-        Get Title
-      </a>
+      {/* Update the assignment's title */}
       <br />
-      <h4>Modifying Properties</h4>
+      <h5>3.2</h5>
       <a
+        className="btn btn-primary"
         href={`${ASSIGNMENT_URL}/title/${assignment.title}`}
-        className="btn btn-warning"
       >
         Update Title
       </a>
-      <br />
       <input
         type="text"
         onChange={(e) =>
@@ -77,31 +69,32 @@ function WorkingWithObjects() {
         }
         value={assignment.title}
       />
-      <br />
-      <h4>Modifying Score Properties</h4>
-      <a
-        href={`${ASSIGNMENT_URL}/score/${assignment.score}`}
-        className="btn btn-warning"
-      >
-        Update Score
+      {/* Update the modules's name */}
+      <a className="btn btn-primary" href={`${MODULE_URL}/name/${module.name}`}>
+        Update Module Name
       </a>
-      <br />
+      <input
+        type="text"
+        onChange={(e) => setModule({ ...module, name: e.target.value })}
+        value={module.name}
+      />
+      {/* Update the assignment's score */}
+      <h4>Update Score</h4>
       <input
         type="number"
         onChange={(e) =>
-          setAssignment({ ...assignment, score: Number(e.target.value) })
+          setAssignment({ ...assignment, score: parseInt(e.target.value) })
         }
         value={assignment.score}
       />
-      <br />
-      <h4>Modifying Completed Properties</h4>
       <a
-        href={`${ASSIGNMENT_URL}/completed/${assignment.completed}`}
-        className="btn btn-warning"
+        className="btn btn-primary"
+        href={`${ASSIGNMENT_URL}/score/${assignment.score}`}
       >
-        Update Completed
+        Update Score
       </a>
-      <br />
+      {/* Update the assignment's completed status */}
+      <h4>Update Completed Status</h4>
       <input
         type="checkbox"
         onChange={(e) =>
@@ -109,43 +102,40 @@ function WorkingWithObjects() {
         }
         checked={assignment.completed}
       />
-
-      <h4>Retrieving Module Objects</h4>
-      <a href="http://localhost:4000/a5/module" className="btn btn-warning">
-        Get Module
-      </a>
-      <h4>Retrieving Module Properties</h4>
       <a
-        href="http://localhost:4000/a5/module/name"
-        className="btn btn-warning"
+        className="btn btn-primary"
+        href={`${ASSIGNMENT_URL}/completed/${assignment.completed}`}
       >
-        Get Name
+        Update Completed Status
       </a>
-      {/* <br />
-      <h4>Modifying Module Properties</h4>
-      <a href={`${MODULE_URL}/name/${module.name}`} className="btn btn-warning">
-        Update Name
-      </a>
-      <br />
-      <input
-        type="text"
-        onChange={(e) => setModule({ ...module, name: e.target.value })}
-        value={module.name}
-      /> */}
-
-      <h4>Modifying Module Properties</h4>
-      <a
-        href={`${MODULE_URL}/description/${module.description}`}
-        className="btn btn-warning"
-      >
-        Update Description
-      </a>
-      <br />
+      {/* Update module's description */}
+      <h4>Update Module Description</h4>
       <input
         type="text"
         onChange={(e) => setModule({ ...module, description: e.target.value })}
         value={module.description}
       />
+      <a
+        className="btn btn-primary"
+        href={`${MODULE_URL}/description/${module.description}`}
+      >
+        Update Description
+      </a>
+
+      <h4>Retrieving Objects</h4>
+      <a className="btn btn-primary" href={`${API_BASE}/a5/assignment`}>
+        Get Assignment
+      </a>
+      <a className="btn btn-primary" href={MODULE_URL}>
+        Get Module
+      </a>
+      <h4>Retrieving Properties</h4>
+      <a className="btn btn-primary" href={`${API_BASE}/a5/assignment/title`}>
+        Get Title
+      </a>
+      <a className="btn btn-primary" href={`${MODULE_URL}/name`}>
+        Get Module Name
+      </a>
     </div>
   );
 }

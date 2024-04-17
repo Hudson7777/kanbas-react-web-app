@@ -1,23 +1,11 @@
-.wd-grade-dropdown{
-    width: 50% !important;
-    border: none;
-    color: red;
+.table-head {
+  border-width: 1;
 }
-
-.wd-grade-button{
-    margin: 5px;
-    padding: 5px;
-    border: 1px solid gray;
-    border-radius: 5px;
-    background-color: lightgrey;
-    color: black;
-    cursor: pointer;
-    max-height: 35px;
-}
-
-.wd-grade-button:hover {
-    color: white;
-    background-color: black;
+  
+  .table-input {
+    width: 100%;
   }
 
-
+  .top-buttons {
+    margin-left: 10px;
+  }

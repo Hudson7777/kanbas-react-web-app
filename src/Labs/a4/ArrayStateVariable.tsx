@@ -15,7 +15,8 @@ function ArrayStateVariable() {
         {array.map((item, index) => (
           <li key={index}>
             {item}
-            <button onClick={() => deleteElement(index)}>Delete</button>
+            <button onClick={() => deleteElement(index)}>
+              Delete</button>
           </li>
         ))}
       </ul>

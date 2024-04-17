@@ -1,114 +1,66 @@
-import { db } from "../../Database";
-import React from "react";
+import { assignments, enrollments, grades, users } from "../../Database";
 import { useParams } from "react-router-dom";
-import { RiSettings4Fill } from "react-icons/ri";
-import { LiaFileImportSolid } from "react-icons/lia";
-import { PiExportBold } from "react-icons/pi";
-import { FaFilter } from "react-icons/fa";
-import { SlMagnifier } from "react-icons/sl";
-import "./index.css";
-
+import { FaFileImport, FaFileExport, FaArrowAltCircleDown, FaFilter } from "react-icons/fa";
+import { FaGear } from "react-icons/fa6";
 function Grades() {
   const { courseId } = useParams();
-  const as = db.assignments.filter(
-    (assignment) => assignment.course === courseId
-  );
-  const es = db.enrollments.filter(
-    (enrollment) => enrollment.course === courseId
-  );
+  console.log(courseId);
+  const as = assignments.filter((assignment) => assignment.course === courseId);
+  console.log(as);
+  const es = enrollments.filter((enrollment) => enrollment.course === courseId);
+  console.log(es);
   return (
     <div>
-      <div className="row">
-        <div className="col mb-3 ">
-          <select className="form-select wd-grade-dropdown">
-            <option selected>Gradebook</option>
-            <option value="1">Gradebook 1</option>
-            <option value="2">Gradebook 2</option>
-            <option value="3">Gradebook 3</option>
-          </select>
-        </div>
-        <div className="col d-flex justify-content-end mx-2">
-          <button className="wd-grade-button">
-            {" "}
-            <LiaFileImportSolid /> Import
-          </button>
-          <button className="wd-grade-button">
-            <PiExportBold /> Export
-          </button>
-          <button className="wd-grade-button">
-            <RiSettings4Fill />
-          </button>
-        </div>
+      <div className="d-flex justify-content-between align-items-center">
+      <div></div>
+      <div className="d-flex align-items-center">
+        <button className="btn btn-light top-buttons"><FaFileImport /> Import</button>
+        <button className="btn btn-light top-buttons"><FaFileExport />Export <FaArrowAltCircleDown /></button>
+        <button className="btn btn-light top-buttons"><FaGear /></button>
       </div>
-      <div className="row">
-        {/* <!-- create a form with 2 labels Student Name and Assignment Name, 1 button called Apply Filters --> */}
-        <div className="col mb-3 w-45">
-          <label className="form-label">Student Names</label>
-          <div className="d-flex align-items-center">
-            <div className="">
-              <SlMagnifier />
-            </div>
-            <input
-              className="form-control"
-              type="text"
-              placeholder="Search students"
-            />
-          </div>
-        </div>
-
-        <div className="col mb-3 w-45">
-          <label className="form-label">Assignment Names</label>
-          <div className="d-flex align-items-center">
-            <div className="">
-              <SlMagnifier />
-            </div>
-            <input
-              className="form-control"
-              type="text"
-              placeholder="Search assignments"
-            />
-          </div>
-        </div>
       </div>
-      <div className="mb-3">
-        <button className="btn btn-light border">
-          <FaFilter /> Apply Filters
-        </button>
+      <div className="row mb-3">
+      <div className="col-6">
+        <h4>Student Names</h4>
+        <input
+          type="text"
+          className="form-control"
+          placeholder="〇 Search Students"
+        />
       </div>
-      <div className="table-responsive">
-        <table className="table">
-          <thead>
-            <th>Student Name</th>
-            {as.map((assignment) => (
-              <th>{assignment.title}</th>
-            ))}
-          </thead>
-
-          <tbody>
-            {es.map((enrollment) => {
-              const user = db.users.find(
-                (user) => user._id === enrollment.user
-              );
-              return (
-                <tr>
-                  <td>
-                    {user?.firstName} {user?.lastName}
-                  </td>
-                  {db.assignments.map((assignment) => {
-                    const grade = db.grades.find(
-                      (grade) =>
-                        grade.student === enrollment.user &&
-                        grade.assignment === assignment._id
-                    );
-                    return <td>{grade?.grade || ""}</td>;
-                  })}
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
+      <div className="col-6">
+        <h4>Assignment Names</h4>
+        <input
+          type="text"
+          className="form-control"
+          placeholder="〇 Search Assignments"
+        />
       </div>
     </div>
-  );
+    <button className="btn btn-light"><FaFilter /> Apply Filters</button>
+
+    <br />
+    <br />
+      <div className="table-responsive">
+        <table className="table table-striped table-bordered">
+          <thead className="table-head">
+            <th>Student Name</th>
+            {as.map((assignment) => (<th className="text-center">{assignment.title}<br /><span style={{ fontWeight: 'normal', backgroundColor: 'transparent' }}>Out of 100</span>
+</th>))}
+          </thead>
+          <tbody>
+            {es.map((enrollment) => {
+              const user = users.find((user) => user._id === enrollment.user);
+              return (
+                <tr>
+                   <td style={{ color: 'red' }}>{user?.firstName} {user?.lastName}</td>
+                   {as.map((assignment) => {
+                     const grade = grades.find(
+                       (grade) => grade.student === enrollment.user && grade.assignment === assignment._id);
+                       return (<td align="center" valign="middle">{grade?.grade || ""}</td>);})}
+                </tr>);
+            })}
+          </tbody></table>
+      </div></div>);
 }
 export default Grades;

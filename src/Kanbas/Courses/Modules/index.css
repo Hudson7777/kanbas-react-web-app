@@ -1,19 +1,25 @@
 .wd-modules,
 .wd-modules * {
-  border-radius: 0%;
+  border-radius: 0% !important;
   border: none;
-  margin: 5px;
-  padding: 3px;
+  margin: 0px;
+  padding: 0px;
+}
+
+.wd-modules .btn {
+  border-radius: 4px !important; /* Or any other value you prefer, or 'initial' to reset */
+  margin-right: 4px;
 }
 
 .wd-modules {
-  margin: 2px;
+  margin: 5px;
 }
 
 .wd-modules > li {
   background-color: lightgray;
   border: 1px solid gray !important;
   border-left: none !important;
+  padding: 0;
 }
 
 .wd-modules > li > div {
@@ -24,63 +30,22 @@
 .wd-modules > li > ul > li {
   padding: 5px;
   border-top: 1px solid gray !important;
-  border-left: 2px solid green;
+  border-left: 2px solid green !important;
 }
-
 
 .wd-modules > li {
   margin-bottom: 20px;
 }
 
-.wd-modules > li > ul > li > ul >li {
-  margin: 5px 5px 10px 5px;
-  border-top: none !important;
-  border: 0.5px solid gray !important;
+.btn-light {
+margin-left: 5px !important;
 }
 
-.wd-modules-button {
-  margin: 5px;
-  padding: 5px;
-  border: 1px solid gray;
-  border-radius: 5px;
-  background-color: white;
-  color: black;
-  cursor: pointer;
-}
-.wd-modules-button-alert {
-  margin: 5px;
-  padding: 5px;
-  border: 1px solid gray;
-  border-radius: 5px;
-  background-color: red;
-  color: white;
-  cursor: pointer;
+#no-top-margin {
+  margin-top: 0 !important;
 }
 
-.wd-modules-button:hover {
-  color: white;
-  background-color: black;
+#no-top-margin-2 {
+  margin-top: 0 !important;
 }
 
-.wd-modules-button-alert:hover {
-  color: red;
-  background-color: white;
-}
-
-.wd-modules-dropdown {
-  margin: 5px;
-  padding: 5px;
-  border: 1px solid gray;
-  border-radius: 5px;
-  background-color: white;
-  color: black;
-  height: auto;
-}
-
-.d-flex {
-  display: flex;
-}
-
-.justify-content-end {
-  justify-content: flex-end;
-}

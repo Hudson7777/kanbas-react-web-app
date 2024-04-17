@@ -11,13 +11,12 @@ const Styles = () => {
     return(
       <div>
         <h2>Styles</h2>
-        <div style={{ "backgroundColor": "lightyellow",
+        <div style={{"backgroundColor": "lightyellow",
           "color": "black", padding: "10px" }}>
           Yellow background</div>
         <div style={ bgRed }> Red background </div>
         <div style={ bgBlue }>Blue background</div>
       </div>
    );};
-   
-   
-export default Styles;   
+
+export default Styles;

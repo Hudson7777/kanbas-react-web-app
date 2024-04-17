@@ -1,17 +1,17 @@
 import { Link, useLocation } from "react-router-dom";
-import "./index.css"; // feel free to use the CSS from previous assignments
+import "./index.css"; // Update the path as needed
+
 function CourseNavigation() {
   const links = [
-    "Home",
-    "Modules",
-    "Piazza",
-    "Grades",
-    "Quizzes",
-    "Assignments",
+    "Home", "Modules", "Piazza", "Zoom Meetings", "Assignments", "Quizzes", 
+    "Grades", "People", "Panopto Video", "Discussions", "Announcements", 
+    "Pages", "Files", "Rubrics", "Outcomes", "Collaborations", "Syllabus", 
+    "Settings"
   ];
   const { pathname } = useLocation();
+
   return (
-    <ul className="wd-navigation">
+    <ul className="wd-course-navigation">
       {links.map((link, index) => (
         <li key={index} className={pathname.includes(link) ? "wd-active" : ""}>
           <Link to={link}>{link}</Link>
@@ -20,4 +20,5 @@ function CourseNavigation() {
     </ul>
   );
 }
+
 export default CourseNavigation;

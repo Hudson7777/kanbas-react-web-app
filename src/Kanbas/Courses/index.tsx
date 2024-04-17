@@ -1,83 +1,95 @@
-import { useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
-import { Navigate, Route, Routes, useParams } from "react-router-dom";
+import { courses } from "../Database";
+import {
+  Navigate,
+  Route,
+  Routes,
+  useParams,
+  useLocation,
+  Link,
+} from "react-router-dom";
+import { useState, useEffect } from "react";
+import axios from "axios";
 import { HiMiniBars3 } from "react-icons/hi2";
 import { FaGlasses } from "react-icons/fa";
 import CourseNavigation from "./Navigation";
 import Modules from "./Modules";
 import Home from "./Home";
-import Quizzes from "./Quizzes";
-import QuizDetails from "./Quizzes/QuizDetails";
 import Assignments from "./Assignments";
 import AssignmentEditor from "./Assignments/Editor";
 import Grades from "./Grades";
-import { useSelector } from "react-redux";
-import { KanbasState } from "../store/store";
-import * as courseClient from "./client";
+import "./index.css";
 
 function Courses() {
   const { courseId } = useParams();
-  const [course, setCourse] = useState({ name: "" });
-  // const courses = useSelector(
-  //   (state: KanbasState) => state.coursesReducer.courses
-  // );
-  // const course = courses.find((course) => course._id === courseId);
-  const fetchCourse = async () => {
-    const course = await courseClient.findCourseById(courseId);
-    setCourse(course);
+  const location = useLocation();
+  const API_BASE = process.env.REACT_APP_API_BASE;
+  const COURSES_API = `${API_BASE}/api/courses`;
+  const [course, setCourse] = useState<any>({ _id: "" });
+  const findCourseById = async (courseId?: string) => {
+    const response = await axios.get(`${COURSES_API}/${courseId}`);
+    setCourse(response.data);
   };
-
   useEffect(() => {
-    fetchCourse();
+    findCourseById(courseId);
   }, [courseId]);
 
-  // get the current tab of course ("Home", "Modules", "Piazza", "Grades", "Assignments")
-  const location = useLocation();
-  const [pathname, setPathname] = useState(location.pathname);
-
-  useEffect(() => {
-    setPathname(location.pathname);
-  }, [location]);
-
-  const lastPath = location.pathname.split("/").pop();
+  const pathSegments = location.pathname
+    .split("/")
+    .filter((segment) => segment)
+    .slice(3);
 
   return (
-    <div>
-      <div
-        className="d-flex justify-content-between align-items-center"
-        style={{ marginRight: "3px" }}
-      >
-        <h3>
-          <HiMiniBars3 /> {course?.name} - {lastPath}
-        </h3>
-        <button type="button" className="btn" style={{ border: "1px solid" }}>
-          <FaGlasses /> Student View
-        </button>
+    <div className="row">
+      <div className="d-flex justify-content-between align-items-center top-bar col">
+        <HiMiniBars3 style={{ color: "red" }} />
+        <nav aria-label="breadcrumb" className="flex-grow-1 custom-breadcrumb">
+          <ol className="breadcrumb">
+            <li className="breadcrumb-item">
+              <Link to="/">{course?.name}</Link>
+            </li>
+            {pathSegments.map((segment, index) => (
+              <li
+                key={index}
+                className={`breadcrumb-item ${
+                  index === pathSegments.length - 1 ? "active" : ""
+                }`}
+                aria-current={
+                  index === pathSegments.length - 1 ? "page" : undefined
+                }
+              >
+                {index === pathSegments.length - 1 ? (
+                  segment
+                ) : (
+                  <Link to={`/${segment}`}>{segment}</Link>
+                )}
+              </li>
+            ))}
+          </ol>
+        </nav>
+        <div className="d-flex align-items-center">
+          <button className="btn btn-light">
+            <FaGlasses />
+            Student View
+          </button>
+        </div>
       </div>
       <hr />
-      <CourseNavigation />
-      <div className="d-none d-md-block">
-        <div
-          className="overflow-y-scroll position-fixed bottom-0 end-0"
-          style={{ left: "320px", top: "75px" }}
-        >
-          <Routes>
-            <Route path="/" element={<Navigate to="Home" />} />
-            <Route path="Home" element={<Home />} />
-            <Route path="Modules" element={<Modules />} />
-            <Route path="Piazza" element={<h1>Piazza</h1>} />
-            <Route path="Quizzes" element={<Quizzes />} />
-            <Route path="Assignments" element={<Assignments />} />
-            <Route
-              path="Assignments/:assignmentId"
-              element={<AssignmentEditor />}
-            />
-            <Route path="Assignments/new" element={<AssignmentEditor />} />
-            <Route path="Quizzes/:quizId" element={<QuizDetails />} />
-            <Route path="Quizzes/new" element={<QuizDetails />} />
-            <Route path="Grades" element={<Grades />} />
-          </Routes>
-        </div>
+      <div className="col-md-3 col-lg-2 col-xl-2 col-xxl-2 d-none d-md-block">
+        <CourseNavigation />
+      </div>
+      <div className="col">
+        <Routes>
+          <Route path="/" element={<Navigate to="Home" />} />
+          <Route path="Home" element={<Home />} />
+          <Route path="Modules" element={<Modules />} />
+          <Route path="Piazza" element={<h1>Piazza</h1>} />
+          <Route path="Assignments" element={<Assignments />} />
+          <Route
+            path="Assignments/:assignmentId"
+            element={<AssignmentEditor />}
+          />
+          <Route path="Grades" element={<Grades />} />
+        </Routes>
       </div>
     </div>
   );
