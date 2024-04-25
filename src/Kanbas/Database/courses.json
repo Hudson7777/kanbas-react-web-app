@@ -1,38 +1,14 @@
-[
-    {
-        "_id": "RS101",
-        "name": "Rocket Propulsion",
-        "number": "RS4550",
-        "startDate": "2024-01-08",
-        "endDate": "2024-04-15",
-        "section": "30311",
-        "semester_id": "202430",
-        "semester": "Spring 2024 Semester Full Term",
-        "section_num": "1",
-        "image": "goat2.jpeg"
-    },
-    {
-        "_id": "RS102",
-        "name": "Aerodynamics",
-        "number": "RS4560",
-        "startDate": "2024-01-08",
-        "endDate": "2024-04-15",
-        "section": "30311",
-        "semester_id": "202430",
-        "semester": "Spring 2024 Semester Full Term",
-        "section_num": "1",
-        "image": "lebum2.jpeg"
-    },
-    {
-        "_id": "RS103",
-        "name": "Spacecraft Design",
-        "number": "RS4570",
-        "startDate": "2024-01-08",
-        "endDate": "2024-04-15",
-        "section": "30311",
-        "semester_id": "202430",
-        "semester": "Spring 2024 Semester Full Term",
-        "section_num": "1",
-        "image": "snake.jpeg"
-    }
-]
+[ { "_id": "RS101", "name": "Rocket Propulsion", "number": "RS4550", "startDate": "2023-01-10",
+    "endDate": "2023-05-15", "image": "rocket-propulsion.png"  },
+  { "_id": "SM5400", "name": "The Basics", "number": "SM2300", "startDate": "2023-01-10",
+    "endDate": "2023-05-15", "image": "celtics.jpg"  },
+  { "_id": "MS1452", "name": "Intro to Music Theory", "number": "MS1000", "startDate": "2023-01-10",
+    "endDate": "2023-05-15", "image": "c-d-x-PDX_a_82obo-unsplash.jpg"  },
+  { "_id": "MA2330", "name": "Intro Business", "number": "MA2300", "startDate": "2023-01-10",
+  "endDate": "2023-05-15", "image": "finn-hackshaw-FQgI8AD-BSg-unsplash.jpg"  },
+  { "_id": "AT4500", "name": "Advanced Design", "number": "AT2000", "startDate": "2023-01-10",
+  "endDate": "2023-05-15", "image": "jess-bailey-l3N9Q27zULw-unsplash.jpg"  },
+  { "_id": "FS1670", "name": "Food Science 101", "number": "FS1300", "startDate": "2023-01-10",
+  "endDate": "2023-05-15", "image": "mike-dorner-sf_1ZDA1YFw-unsplash.jpg" },
+  { "_id": "ES2300", "name": "Natural Geo", "number": "ES3000", "startDate": "2023-01-10",
+  "endDate": "2023-05-15", "image": "katie-moum-iRMUDX0kyOc-unsplash.jpg"  } ]

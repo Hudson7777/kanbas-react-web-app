@@ -1,17 +1,19 @@
 import EncodingParametersInURLs from "./EncodingParametersInURLs";
-import WorkingWithObjects from "./WorkingWithObjects";
 import WorkingWithArrays from "./WorkingWithArrays";
+import WorkingWithObjects from "./WorkingWithObjects";
+const API_BASE = process.env.REACT_APP_API_BASE || "http://localhost:4000";
+
 function Assignment5() {
     return (
-        <div>
-            <h1>Assignment 5</h1>
-            <a href="http://localhost:4000/a5/welcome">
-                Welcome
-            </a>
-            <EncodingParametersInURLs />
-            <WorkingWithObjects />
-            <WorkingWithArrays />
-        </div>
+      <div>
+        <h1>Assignment 5</h1>
+        <a href={`${API_BASE}/a5/welcome`}>
+          Welcome
+        </a>
+        <EncodingParametersInURLs/>
+        <WorkingWithObjects/>
+        <WorkingWithArrays/>
+      </div>
     );
-}
-export default Assignment5;
+  }
+  export default Assignment5;

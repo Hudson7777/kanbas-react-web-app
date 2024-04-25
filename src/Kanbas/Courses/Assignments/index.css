@@ -1,44 +1,91 @@
-.searchBox {
-    position: relative;
-    display: flex;
-    align-items: center;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    background-color: white;
+.wd-pos-fixed-left {
+    position: fixed;
+    left: 0px;
+    bottom:50%
 }
 
-.searchIcon {
-    position: absolute;
-    left: 10px;
-    color: #ccc;
+.bi {
+    font-size: 1.5em;
 }
 
-.searchInput {
-    width: 100%;
-    padding: 8px 8px 8px 30px;
-    border: none;
-    border-radius: 4px;
-    outline: none;
+.small {
+    font-size: .7em;
 }
 
-.wd-modules .list-group-item a {
-    color: inherit;
-    text-decoration: none;
-    font-weight: bold;
+
+.wd-assignment,
+.wd-assignment * {
+  border-radius: 0%;
+  border: none;
+  margin: 0px;
+  padding: 0px;
 }
 
-.assignmentsButton {
-    background-color: red;
-    color: white;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
+.wd-assignment {
+  margin: 5px;
 }
 
-.groupButton {
-    border: none;
-    padding: 8px 16px;
-    border-radius: 4px;
-    cursor: pointer;
+.wd-assignment > li {
+  background-color: lightgray;
+  border: 1px solid gray !important;
+  border-left: none !important;
+}
+
+.wd-assignment > li > div {
+  padding: 6px;
+  border-left: 1px solid gray !important;
+}
+
+.wd-assignment > li > ul > li {
+  padding: 5px;
+  border-top: 1px solid gray !important;
+  border-left: 2px solid green;
+}
+
+.wd-assignment > li {
+  margin-bottom: 20px;
+}
+
+
+.assign {
+    height: 70px;
+    margin-left: 10px;
+}
+
+.green {
+    color: green
+}
+
+.small {
+    line-height: .95;
+    font-size: small;
+}
+
+.smallest {
+  line-height: .95;
+  font-size: 0.5em;
+}
+
+.custom-col-1 {
+  padding-right: 15px; /* You can adjust the value as needed */ 
+}
+
+.inline {
+  display: inline-block;
+}
+
+.light-gray {
+  background-color: gainsboro;
+}
+
+.btn-custom {
+    background-color: rgb(171, 168, 165);
+}
+
+.gray {
+  background-color: rgb(171, 168, 165);
+}
+
+.custom-green {
+  color: green;
 }

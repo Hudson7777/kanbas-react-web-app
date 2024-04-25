@@ -1,17 +1,15 @@
 import ModuleList from "../Modules/List";
-import Status from "./Status";
-import "./index.css";
+import Status from "../Status";
+
 
 function Home() {
-    return (
-        <div className="homeContainer">
-            <div className="moduleList">
-                <ModuleList />
-            </div>
-            <div className="status">
-                <Status />
-            </div>
-        </div>
-    );
+  return (
+  <div>
+      <div className="row flex-grow">
+      <div className="col flex-grow"><ModuleList /></div>
+      <div className="col-3"><Status/></div>
+      </div>
+    </div>
+  );
 }
 export default Home;

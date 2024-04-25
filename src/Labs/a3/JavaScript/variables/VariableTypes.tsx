@@ -19,4 +19,5 @@ function VariableTypes() {
       </div>
     );
   }
-  export default VariableTypes
+  export default VariableTypes;
+  
